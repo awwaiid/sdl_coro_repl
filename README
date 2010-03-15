@@ -1,0 +1,14 @@
+This gives a REPL and a hard-wired SDL window. Here an example usage:
+
+  awwaiid@talon:~/projects/perl/sdl_coro_repl$ perl sdl_coro_repl.pl
+  main:001:0> make_box(0.01,63,400)
+  $Coro1 = Coro=HASH(0x91e7960);
+  main:002:0> 5+5
+  10
+  main:003:0> make_box(0.001,5,5)
+  $Coro1 = Coro=HASH(0x9177760);
+  main:004:0> exit
+
+Goal: An interactive prompt for manipulating sprites, reminiscent of the
+commodore 64 of old.
+
