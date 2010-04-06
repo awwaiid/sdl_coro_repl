@@ -9,14 +9,7 @@ use AnyEvent;
 sub _event {
     my $self = shift;
 
-    $self->{event} = SDL::Event->new() unless $self->{event};
-    while ( SDL::Events::poll_event( $self->{event} ) ) {
-      # print STDERR "Got event!\n";
-        SDL::Events::pump_events();
-        foreach my $event_handler ( @{ $self->{event_handlers} } ) {
-            $self->quit unless $event_handler->( $self->{event} );
-        }
-    }
+    $self->SUPER::_event(@_);
 
     # Magical cede to other anyEvent stuff
     my $done = AnyEvent->condvar;
