@@ -15,17 +15,9 @@ use SDL;
 use SDL::App;
 use SDL::Game::Rect;
 use SDL::Event;
-use SDL::Events;
-use SDL::Rect;
-use SDL::Video;
-use SDL::Event;
-use SDL::Events;
-use SDL::Surface;
 use SDL::Audio;
 use SDL::Mixer;
 use SDL::Mixer::Music;
-use SDL::Mixer::Effects;
-use Carp;
 
 our $app;
 our $pixel_format;
